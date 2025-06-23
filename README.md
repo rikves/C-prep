@@ -1,1 +1,4 @@
-Preparation 🏊🏻‍Rievks
+Preparation 🏊🏻‍♂️
+
+⚠️  REMIND :Ϝɾιҳⱱҽ ɾvʏʏ qɓ ʋɠ
+
