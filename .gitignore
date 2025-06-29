@@ -1,5 +1,2 @@
-*.log
-*.tmp
 .DS_Store
-build/
-
+mywork.c
