@@ -13,7 +13,12 @@ int main(){
 	int fd = open("test.txt", O_RDWR | O_CREAT , 0600);
 
 	write(fd, "salah\n", 6);
-	sleep(25);
+
+	int fd2 = open("in.txt", O_RDWR | O_CREAT, 0600);
+	sleep(30);
 	
+	write(fd2, "koulal\n", 7);
+	
+
 	return (0);
 }
