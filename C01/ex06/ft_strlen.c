@@ -6,18 +6,18 @@
 /*   By: skoulal <skosalah1@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 20:22:03 by skoulal           #+#    #+#             */
-/*   Updated: 2025/07/22 20:27:14 by skoulal          ###   ########.fr       */
+/*   Updated: 2025/07/25 18:24:11 by skoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 int	ft_strlen(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (*str != '\0' )
+	while (str[i] != '\0' )
 	{
-		str++;
 		i++;
 	}
 	return (i);

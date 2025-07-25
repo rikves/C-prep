@@ -32,7 +32,11 @@ int main(){
 	printf("n = %d\n", n);
 	printf("m = %d\n", m);
 	printf("=== Hold on i'll swap with \tbroken one ===\n");
-	borken_swap(n,m);
+	// borken_swap(n,m);
+	// printf("n = %d\n", n);
+	// printf("m = %d\n", m);
+	printf("=== Hold on i'll swap with \t working one ===\n");
+	working_swap(&n, &m);
 	printf("n = %d\n", n);
 	printf("m = %d\n", m);
 }

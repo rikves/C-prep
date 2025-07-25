@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int	main(void)
+int main(int ac, char **av)
 {
-	char *s = "sevkir\n";
-	
+	char *s = av[1];
+
 	printf("%d", ft_strlen(s));
 }
