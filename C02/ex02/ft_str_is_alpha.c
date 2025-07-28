@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skoulal <skosalah1@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/28 03:33:54 by skoulal           #+#    #+#             */
-/*   Updated: 2025/07/28 04:05:27 by skoulal          ###   ########.fr       */
+/*   Created: 2025/07/28 04:41:46 by skoulal           #+#    #+#             */
+/*   Updated: 2025/07/28 06:18:35 by skoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+int	ft_str_is_alpha(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		if ((str[i] >= 'A' && str[i] <= 'Z')
+			|| (str[i] >= 'a' && str[i] <= 'z'))
+		{
+			i++;
+		}
+		else
+		{
+			return (0);
+		}
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }
