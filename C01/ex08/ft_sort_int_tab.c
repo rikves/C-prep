@@ -1,52 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skoulal <skosalah1@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/29 16:16:08 by skoulal           #+#    #+#             */
-/*   Updated: 2025/07/26 02:59:11 by skoulal          ###   ########.fr       */
+/*   Created: 2025/07/26 00:35:21 by skoulal           #+#    #+#             */
+/*   Updated: 2025/07/26 01:11:35 by skoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void	ft_swap(int *a, int *b)
 {
-	write(1, &c, 1);
+	int	temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
 
-void	put_comb(int a, int b, int c)
+void	ft_sort_int_tab(int *tab, int size)
 {
-	ft_putc(a);
-	ft_putc(b);
-	ft_putc(c);
-	if (!(a == '7'))
-	{
-		ft_putchar(',');
-		ft_putchar(' ');
-	}
-}
+	int	i;
+	int	j;
 
-void	ft_print_comb(void)
-{
-	char	i;
-	char	j;
-	char	k;
-
-	i = '0';
-	while (i <= '7')
+	i = 0;
+	while (i < size - 1)
 	{
-		j = i + 1;
-		while (j <= '8')
+		j = 0;
+		while (j < size - 1 - i)
 		{
-			k = j + 1;
-			while (k <= '9')
-			{
-				put_comb(i, j, k);
-				k++;
-			}
+			if (tab[j] > tab[j +1])
+				ft_swap(&tab[j], &tab[j +1]);
 			j++;
 		}
 		i++;

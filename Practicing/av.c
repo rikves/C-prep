@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 
-void	set_value(int ***ptr)
+void	set_value(int **ptr)
 {
-	***ptr= 99;
+	**ptr= 99;
 }
 
 
@@ -14,7 +14,7 @@ int main(int ac, char **av) {
 	int **pp = &p;
 	printf("\t\t\t%d\n\n",n);	
 	
-	set_value(&pp);
-	printf("%d",n);	
+	set_value(pp);
+	printf("\t\t\t%d\n",n);	
 	return 0;
 }

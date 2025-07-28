@@ -1,54 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skoulal <skosalah1@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/29 16:16:08 by skoulal           #+#    #+#             */
-/*   Updated: 2025/07/26 02:59:11 by skoulal          ###   ########.fr       */
+/*   Created: 2025/07/28 03:33:54 by skoulal           #+#    #+#             */
+/*   Updated: 2025/07/28 03:38:27 by skoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+char	*ft_strcpy(char *dest, char *src)
 {
-	write(1, &c, 1);
-}
+	unsigned int	i;
 
-void	put_comb(int a, int b, int c)
-{
-	ft_putc(a);
-	ft_putc(b);
-	ft_putc(c);
-	if (!(a == '7'))
+	i = 0;
+	while (src[i] != '\0')
 	{
-		ft_putchar(',');
-		ft_putchar(' ');
-	}
-}
-
-void	ft_print_comb(void)
-{
-	char	i;
-	char	j;
-	char	k;
-
-	i = '0';
-	while (i <= '7')
-	{
-		j = i + 1;
-		while (j <= '8')
-		{
-			k = j + 1;
-			while (k <= '9')
-			{
-				put_comb(i, j, k);
-				k++;
-			}
-			j++;
-		}
+		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
+	return (dest);
 }
