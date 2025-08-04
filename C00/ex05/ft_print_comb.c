@@ -6,7 +6,7 @@
 /*   By: skoulal <skosalah1@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/29 16:16:08 by skoulal           #+#    #+#             */
-/*   Updated: 2025/07/26 02:59:11 by skoulal          ###   ########.fr       */
+/*   Updated: 2025/08/01 19:17:28 by skoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	ft_putchar(char c)
 
 void	put_comb(int a, int b, int c)
 {
-	ft_putc(a);
-	ft_putc(b);
-	ft_putc(c);
+	ft_putchar(a);
+	ft_putchar(b);
+	ft_putchar(c);
 	if (!(a == '7'))
 	{
 		ft_putchar(',');

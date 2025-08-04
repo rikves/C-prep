@@ -6,7 +6,7 @@
 /*   By: skoulal <skosalah1@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 15:13:59 by skoulal           #+#    #+#             */
-/*   Updated: 2025/07/28 15:17:35 by skoulal          ###   ########.fr       */
+/*   Updated: 2025/07/28 16:03:59 by skoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_str_is_uppercase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
+		if (str[i] >= 'A' && str[i] <= 'Z') //GDGgreg
 		{
 			i++;
 		}

@@ -15,7 +15,7 @@ int main()
 {
 	char *str = "===========================================\n";
 	char src1[] = "salah koulal\n";
-	char dest1[20];
+	char dest1[5];
 
 	unsigned int n;
 	n = 5;
