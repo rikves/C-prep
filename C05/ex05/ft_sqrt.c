@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skoulal <skosalah1@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/04 12:08:58 by skoulal           #+#    #+#             */
-/*   Updated: 2025/08/05 12:59:17 by skoulal          ###   ########.fr       */
+/*   Created: 2025/08/04 18:15:50 by skoulal           #+#    #+#             */
+/*   Updated: 2025/08/05 00:13:21 by skoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+int	ft_sqrt(int nb)
 {
-	unsigned int	result;
+	int	i;
 
-	result = 1;
-	if (nb < 0)
-	{
+	i = 1;
+	if (nb <= 0)
 		return (0);
-	}
 
-	while (nb > 0)
+	while (i <= nb/i)
 	{
-		result *= nb;
-		nb--;
+		if (i * i == nb)
+			return (i);
+		i++;
 	}
-	return (result);
+	return (0);	
 }
