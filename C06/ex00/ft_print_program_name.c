@@ -1,41 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skoulal <skosalah1@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/31 23:16:01 by skoulal           #+#    #+#             */
-/*   Updated: 2025/08/18 15:24:39 by skoulal          ###   ########.fr       */
+/*   Created: 2025/08/06 01:21:04 by skoulal           #+#    #+#             */
+/*   Updated: 2025/08/06 01:25:36 by skoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_putstr_non_printable(char *str)
+int	main(int argc, char *argv[])
 {
 	int	i;
-	char *b16;
 
-	b16 = "0123456789abcdef";
 	i = 0;
-	while (str[i] != '\0')
+	while (argv[0][i] && argc > 0)
 	{
-		if (str[i] < 32 || str[i] > 126)
-		{
-			ft_putchar('\\');
-			ft_putchar(b16[str[i] / 16]);
-			ft_putchar(b16[str[i] % 16]);
-		}
-		else
-		{
-			ft_putchar(str[i]);
-		}
+		write(1, &argv[0][i], 1);
 		i++;
 	}
+	write(1, "\n", 1);
+	return (0);
 }

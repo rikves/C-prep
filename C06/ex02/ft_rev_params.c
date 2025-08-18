@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skoulal <skosalah1@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/31 23:16:01 by skoulal           #+#    #+#             */
-/*   Updated: 2025/08/18 15:24:39 by skoulal          ###   ########.fr       */
+/*   Created: 2025/08/06 18:04:55 by skoulal           #+#    #+#             */
+/*   Updated: 2025/08/06 18:56:32 by skoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_putstr_non_printable(char *str)
+void	ft_putstr(char *s)
 {
 	int	i;
-	char *b16;
 
-	b16 = "0123456789abcdef";
 	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] < 32 || str[i] > 126)
-		{
-			ft_putchar('\\');
-			ft_putchar(b16[str[i] / 16]);
-			ft_putchar(b16[str[i] % 16]);
-		}
-		else
-		{
-			ft_putchar(str[i]);
-		}
-		i++;
-	}
+	while (s[i] != '\0')
+		write(1, &s[i++], 1);
+	write(1, "\n", 1);
+}
+
+int	main(int argc, char *argv[])
+{
+	while (--argc)
+		ft_putstr(argv[argc]);
+	return (0);
 }

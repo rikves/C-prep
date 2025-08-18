@@ -6,7 +6,7 @@
 /*   By: skoulal <skosalah1@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 18:21:09 by skoulal           #+#    #+#             */
-/*   Updated: 2025/08/02 19:48:19 by skoulal          ###   ########.fr       */
+/*   Updated: 2025/08/15 10:11:29 by skoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int ft_atoi(char *str)
 	int number;
 	int parity;
 
-	parity = number = 0;
+	parity = 0;
+	number = 0;
 	// string can have many spaces -> isspace -> SKIP THEM
 	while ((*str >= 9 && *str <= 13) || (*str) == 32)
 	{

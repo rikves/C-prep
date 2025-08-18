@@ -19,9 +19,10 @@ int	main(int ac, char **av)
 {
 	int	len;
 
-	len = ft_strlen(av[1]);
+        //len = ft_strlen(av[1]);
 	if(ac == 2)
 	{
+		len = ft_strlen(av[1]);
 		while(len >= 0)
 		{
 			write(1,&av[1][len],1);

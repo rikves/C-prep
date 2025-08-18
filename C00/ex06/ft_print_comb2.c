@@ -6,7 +6,7 @@
 /*   By: skoulal <skosalah1@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/29 16:50:57 by skoulal           #+#    #+#             */
-/*   Updated: 2025/06/29 17:07:01 by skoulal          ###   ########.fr       */
+/*   Updated: 2025/08/08 21:50:09 by skoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,9 @@ void	ft_print_comb2(void)
 		}
 		m++;
 	}
+}
+
+int	main(void)
+{
+	ft_print_comb2();
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: skoulal <skosalah1@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 20:51:02 by skoulal           #+#    #+#             */
-/*   Updated: 2025/07/24 02:59:44 by skoulal          ###   ########.fr       */
+/*   Created: 2025/08/14 15:06:04 by skoulal           #+#    #+#             */
+/*   Updated: 2025/08/14 15:23:17 by skoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,17 @@ void	ft_putchar(char c)
 
 void	ft_putstr(char *str)
 {
-	while (*str != '\0')
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putchar(*str++);
+		ft_putchar(str[i]);
+		i++;
 	}
 }
+
+// int	main(void)
+// {
+// 	ft_putstr("SalahEddine\n");
+// }
