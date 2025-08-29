@@ -7,13 +7,13 @@ void ft_putchar(char c)
 	write(1,&c,1);
 }
 
-void putnb(int n)
-{
-	if (n >= 10)
-		putnb(n / 10);
-	ft_putchar((n % 10) + 48);
+// void putnb(int n)
+// {
+// 	if (n >= 10)
+// 		putnb(n / 10);
+// 	ft_putchar((n % 10) + 48);
 
-}
+// }
 
 
 int	main()
@@ -36,7 +36,8 @@ int	main()
 		}
 		else
 		{
-			putnb(i);
+			ft_putchar(i / 10 + 48);
+			ft_putchar(i % 10 + 48);
 		}
 		write(1,"\n",1);
 		i++;

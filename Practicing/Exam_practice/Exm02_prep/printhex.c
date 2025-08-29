@@ -38,6 +38,7 @@ void	ft_putchar(char c)
 }
 void	print_nb(int n, int c, char *symbols)
 {
+	
 	if (n < 0)
 	{
 		ft_putchar('-');
@@ -52,10 +53,13 @@ void	print_nb(int n, int c, char *symbols)
 int main(int argc, char  *argv[])
 {
 	int i =0;
-	int hex = ft_atoi(argv[1]);
-	char *base16 = "0123456789abcdef";
-
-	print_nb(hex, 16, base16);
+	
+	if (argc ==2)
+	{
+		char *base16 = "0123456789abcdef";
+		int hex = ft_atoi(argv[1]);
+		print_nb(hex, 16, base16);
+	}
 	write(1,"\n",1);
 	return 0;
 }
